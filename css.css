@@ -58,19 +58,30 @@ a:hover {
 /* Contenedores */
 .container {
     width: 90%;
-    max-width: 1200px;
+    max-width: 800px; /* Ajuste para el nuevo diseño */
     margin: 20px auto;
     background: var(--color-blanco);
     padding: 20px;
     box-shadow: 0 4px 8px var(--color-sombra);
     border-radius: 10px;
+    overflow: hidden; /* Añadido para el nuevo diseño */
 }
 
 /* Formularios */
-form {
+form.patient-form { /* Cambiado para que solo afecte el formulario de paciente */
     display: flex;
     flex-direction: column;
     gap: 15px;
+}
+
+.patient-form .form-group { /* Añadido para el nuevo diseño */
+    margin-bottom: 15px;
+}
+
+.patient-form label { /* Añadido para el nuevo diseño */
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
 input, select, button {
@@ -90,15 +101,18 @@ input:focus, select:focus {
     box-shadow: 0 0 5px rgba(0, 137, 123, 0.5); /* Sombra verde azulado */
 }
 
-button {
+button.save-btn { /* Cambiado para que solo afecte el botón de guardar */
     background-color: var(--color-boton);
     color: var(--color-blanco);
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    padding: 12px 20px; /* Añadido para el nuevo diseño */
+    font-size: 1em; /* Añadido para el nuevo diseño */
+    width: 100%; /* Añadido para el nuevo diseño */
 }
 
-button:hover {
+button.save-btn:hover { /* Cambiado para que solo afecte el botón de guardar */
     background-color: var(--color-boton-hover);
 }
 
@@ -138,14 +152,19 @@ button:hover {
 
 /* Botón de Volver */
 .back-btn {
-    display: inline-block;
+    display: inline-flex; /* Cambiado a inline-flex para alinear el icono */
+    align-items: center; /* Centrar verticalmente el icono */
     margin: 10px 0;
     padding: 10px 15px;
     background-color: #607d8b; /* Gris azulado */
     color: var(--color-blanco);
     border-radius: 5px;
-    text-align: center;
+    text-decoration: none; /* Añadido para evitar subrayado */
     transition: background-color 0.3s ease;
+}
+
+.back-btn i { /* Estilo para el icono */
+    margin-right: 8px; /* Espacio entre el icono y el texto */
 }
 
 .back-btn:hover {
@@ -227,6 +246,11 @@ embed {
     #listaPacientesMedico, #detallePaciente {
         width: 100%;
     }
+
+    embed {
+        height: 300px;
+    }
+}
 
     embed {
         height: 300px;
