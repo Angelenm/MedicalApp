@@ -5,45 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Paciente</title>
     <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <header>
-        <h1>Registro de Paciente</h1>
-        <a href="index.html" class="back-btn">Volver</a>
-    </header>
-    <main>
-        <form id="formPaciente">
-            <input type="text" id="nombrePaciente" placeholder="Nombre completo" required>
-            <select id="tipoSangre" required>
-                <option value="">Selecciona tu tipo de sangre</option>
-                <option value="A+">A+</option>
-                <option value="A-">A-</option>
-                <option value="B+">B+</option>
-                <option value="B-">B-</option>
-                <option value="AB+">AB+</option>
-                <option value="AB-">AB-</option>
-                <option value="O+">O+</option>
-                <option value="O-">O-</option>
-            </select>
-
-            <input type="number" id="edadPaciente" placeholder="Edad" min="0" max="120" required>
-            <input type="number" id="alturaPaciente" placeholder="Altura (en cm)" min="50" max="250" required>
-            
-            <select id="sexoPaciente" required>
-                <option value="">Selecciona tu sexo</option>
-                <option value="Masculino">Masculino</option>
-                <option value="Femenino">Femenino</option>
-                <option value="Otro">Otro</option>
-            </select>
-            
-            <!-- Nuevo campo para subir historia médica en PDF -->
-            <label for="historiaMedica">Subir Historia Médica (PDF):</label>
-            <input type="file" id="historiaMedica" accept="application/pdf" required>
-
-            <button type="submit">Guardar</button>
-        </form>
-        <div id="listaPacientes"></div>
-    </main>
+    <div class="container">
+        <header class="app-header">
+            <h1>Registro de Paciente</h1>
+            <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Volver</a>
+        </header>
+        <main class="app-main">
+            <form id="formPaciente" class="patient-form">
+                <div class="form-group">
+                    <label for="nombrePaciente">Nombre completo:</label>
+                    <input type="text" id="nombrePaciente" placeholder="Nombre completo" required>
+                </div>
+                <div class="form-group">
+                    <label for="tipoSangre">Tipo de sangre:</label>
+                    <select id="tipoSangre" required>
+                        <option value="">Selecciona tu tipo de sangre</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="edadPaciente">Edad:</label>
+                    <input type="number" id="edadPaciente" placeholder="Edad" min="0" max="120" required>
+                </div>
+                <div class="form-group">
+                    <label for="alturaPaciente">Altura (en cm):</label>
+                    <input type="number" id="alturaPaciente" placeholder="Altura (en cm)" min="50" max="250" required>
+                </div>
+                <div class="form-group">
+                    <label for="sexoPaciente">Sexo:</label>
+                    <select id="sexoPaciente" required>
+                        <option value="">Selecciona tu sexo</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Femenino">Femenino</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="historiaMedica">Subir Historia Médica (PDF):</label>
+                    <input type="file" id="historiaMedica" accept="application/pdf" required>
+                </div>
+                <button type="submit" class="save-btn">Guardar</button>
+            </form>
+            <div id="listaPacientes" class="patient-list"></div>
+        </main>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>
