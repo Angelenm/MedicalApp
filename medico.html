@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Médico</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <header>
+        <h1>Panel Médico</h1>
+        <a href="index.html" class="back-btn">Volver</a>
+    </header>
+    <main>
+        <!-- Lista de pacientes en el lado izquierdo -->
+        <div id="listaPacientesMedico"></div>
+
+        <div id="detallePaciente">
+            <h2>Detalle del Paciente</h2>
+            <div id="infoPaciente"></div>
+            <iframe id="visorPdf" src="" style="display: none; width: 100%; height: 500px; border: none; margin-top: 20px;"></iframe>
+            
+            <!-- Cuadro de texto para el diagnóstico -->
+            <label for="diagnostico">Diagnóstico:</label>
+            <textarea id="diagnostico" placeholder="Ingrese el diagnóstico del paciente..." rows="4"></textarea>
+            <button onclick="guardarDiagnostico()">Guardar Diagnóstico</button>
+        </div>
+        
+    <script src="main.js"></script>
+</body>
+</html>

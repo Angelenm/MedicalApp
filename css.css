@@ -1,0 +1,234 @@
+/* Estilos Generales para App de Registros Médicos */
+:root {
+    --color-primario: #00897b; /* Verde azulado principal (similar a teal) */
+    --color-secundario: #00695c; /* Verde azulado oscuro */
+    --color-fondo: #f0f8f7; /* Fondo muy claro */
+    --color-texto: #424242; /* Gris oscuro para texto */
+    --color-blanco: #ffffff;
+    --color-sombra: rgba(0, 0, 0, 0.15); /* Sombra suave */
+    --color-borde: #e0e0e0; /* Borde gris claro */
+    --color-boton: #00897b; /* Botón verde azulado */
+    --color-boton-hover: #00695c; /* Botón verde azulado oscuro al pasar el mouse */
+    --color-error: #d32f2f; /* Rojo para errores (más oscuro) */
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Fuente Roboto */
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: var(--color-primario);
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 20px 0;
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    margin: 0;
+}
+
+h2 {
+    font-size: 2rem;
+    border-bottom: 2px solid var(--color-primario);
+    padding-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: var(--color-secundario);
+}
+
+a {
+    color: var(--color-primario);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Contenedores */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background: var(--color-blanco);
+    padding: 20px;
+    box-shadow: 0 4px 8px var(--color-sombra);
+    border-radius: 10px;
+}
+
+/* Formularios */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0;
+    border: 1px solid var(--color-borde);
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+input:focus, select:focus {
+    border-color: var(--color-primario);
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 137, 123, 0.5); /* Sombra verde azulado */
+}
+
+button {
+    background-color: var(--color-boton);
+    color: var(--color-blanco);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--color-boton-hover);
+}
+
+/* Listas */
+.lista {
+    margin-top: 20px;
+}
+
+.lista div {
+    background: var(--color-blanco);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px var(--color-sombra);
+}
+
+.lista div:hover {
+    background-color: #e8f5f4; /* Un tono más claro del fondo */
+}
+
+.lista button {
+    width: auto;
+    padding: 8px 12px;
+    font-size: 14px;
+    background: var(--color-error);
+    border-radius: 5px;
+    color: var(--color-blanco);
+}
+
+.lista button:hover {
+    background: #b71c1c; /* Rojo más oscuro */
+}
+
+/* Botón de Volver */
+.back-btn {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 10px 15px;
+    background-color: #607d8b; /* Gris azulado */
+    color: var(--color-blanco);
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #455a64; /* Gris azulado oscuro */
+    text-decoration: none;
+}
+
+/* Panel Médico */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+#listaPacientesMedico {
+    background: var(--color-blanco);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px var(--color-sombra);
+}
+
+#detallePaciente {
+    background: var(--color-blanco);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px var(--color-sombra);
+}
+
+#listaPacientesMedico div {
+    padding: 10px;
+    margin: 10px 0;
+    background: var(--color-fondo);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#listaPacientesMedico div:hover {
+    background-color: #e0f2f1; /* Otro tono claro */
+}
+
+#infoPaciente {
+    margin-bottom: 20px;
+}
+
+embed {
+    width: 100%;
+    height: 500px;
+    border: none;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px var(--color-sombra);
+}
+
+/* Adaptabilidad Móvil */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    input, select, button {
+        font-size: 14px;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    #listaPacientesMedico, #detallePaciente {
+        width: 100%;
+    }
+
+    embed {
+        height: 300px;
+    }
+}
