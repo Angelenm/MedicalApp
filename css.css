@@ -54,7 +54,55 @@ a {
 a:hover {
     text-decoration: underline;
 }
+.role-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 15px 20px;
+    background-color: var(--color-boton);
+    color: var(--color-blanco);
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+}
+.user-roles {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
+.role-item {
+    text-align: center;
+}
+/* Encabezado */
+.app-header {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    padding: 20px;
+    text-align: center;
+}
+
+.app-header h1 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+/* Main */
+.app-main {
+    padding: 30px;
+}
+
+.intro-text {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+}
 /* Contenedores */
 .container {
     width: 90%;
@@ -246,11 +294,6 @@ embed {
     #listaPacientesMedico, #detallePaciente {
         width: 100%;
     }
-
-    embed {
-        height: 300px;
-    }
-}
 
     embed {
         height: 300px;
